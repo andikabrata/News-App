@@ -210,7 +210,7 @@ class MainActivity : BaseVMActivity<MainViewModel, ActivityMainBinding>() {
         )
 
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val triggerAt = System.currentTimeMillis() + (10_000) // 10 menit
+        val triggerAt = System.currentTimeMillis() + (10 * 60 * 1000) // 10 menit
 
         alarmManager.setExactAndAllowWhileIdle(
             AlarmManager.RTC_WAKEUP,
